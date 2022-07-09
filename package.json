@@ -1,0 +1,22 @@
+{
+  "name": "lambda-rds-mssql-exec-sp",
+  "version": "0.1.1",
+  "main": "index.js",
+  "repository": "https://github.com/michaelmaky/lambda-rds-mssql-exec-sp",
+  "author": "Michael Ma <kingyinma@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "zip:lamnda": "./zip-lambda.sh",
+    "zip:layer": "./zip-layer.sh",
+    "zip:clear": "rm *.zip",
+    "zip:all": "for dir in `ls -d */ | sed 's#/##'`; do ./zip.sh $dir;done;",
+    "build:layer": "./build-layer.sh",
+    "build:lambda": "./build-lambda.sh",
+    "deploy:layer": "./deploy-layer.sh",
+    "deploy:lambda": "./deploy-lambda.sh"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}
